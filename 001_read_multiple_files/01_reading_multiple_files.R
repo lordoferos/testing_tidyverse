@@ -13,6 +13,8 @@ file_paths
 
 file_contents <- list()
 
+# A loop that runs along all file paths, then reads the contents into a list
+
 for (i in seq_along(file_paths)) {
     file_contents[[i]] <- read_csv(
         file = file_paths[[i]]
