@@ -26,7 +26,10 @@ file_contents <- set_names(file_contents, file_paths)
 
 # 2.0 PURRR MAP ----
 
-file_paths %>%
+# Mapping the function on all the file paths to read into csv
+
+file_contents2 <-
+    file_paths %>%
     map(function (path) {
         read_csv(path)
     })
