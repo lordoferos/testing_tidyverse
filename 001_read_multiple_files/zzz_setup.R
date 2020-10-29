@@ -4,6 +4,8 @@
 
 library(tidyverse)
 
+#writes different unique csv files for the manufacturers
+
 mpg %>%
     group_by(manufacturer) %>%
     group_split() %>%
