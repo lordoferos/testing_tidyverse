@@ -41,6 +41,7 @@ lecture_analysis_tbl <- table_content_tbl %>%
 
 
 # 4.0 VISUALIZE RESULTS ----
+lec_compl <-
 lecture_analysis_tbl %>%
     ggplot(aes(students, lectures_completed)) +
     geom_point(aes(size = activity_ratio)) +
@@ -56,6 +57,13 @@ lecture_analysis_tbl %>%
     scale_y_continuous(label = scales::comma) +
     expand_limits(y = 0) +
     theme_minimal()
+
+# Save file
+ggsave("002_scraping_word_docs/lec_compl.png",
+       width = 10,
+       height = 15,
+       units = "cm")
+
 
 # LEARN MORE:
 # - Recommendation: DS4B 101-R Course
